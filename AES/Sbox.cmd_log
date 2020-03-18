@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Sbox.ngc Sbox_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 Sbox.ngc Sbox.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Sbox_map.ncd Sbox.ngd Sbox.pcf 
+par -w -intstyle ise -ol high -mt off Sbox_map.ncd Sbox.ncd Sbox.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Sbox.twx Sbox.ncd -o Sbox.twr Sbox.pcf 
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Sbox.ngc Sbox_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 Sbox.ngc Sbox.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Sbox.ucf -p xc7a100t-csg324-1 Sbox.ngc Sbox.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Sbox_map.ncd Sbox.ngd Sbox.pcf 
+par -w -intstyle ise -ol high -mt off Sbox_map.ncd Sbox.ncd Sbox.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Sbox.twx Sbox.ncd -o Sbox.twr Sbox.pcf -ucf Sbox.ucf 
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Sbox.ucf -p xc7a100t-csg324-1 Sbox.ngc Sbox.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Sbox_map.ncd Sbox.ngd Sbox.pcf 
+par -w -intstyle ise -ol high -mt off Sbox_map.ncd Sbox.ncd Sbox.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Sbox.twx Sbox.ncd -o Sbox.twr Sbox.pcf -ucf Sbox.ucf 
+xst -intstyle ise -ifn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.xst" -ofn "C:/Users/qiuke/Desktop/AES_V1.0/AES/Sbox.syr" 

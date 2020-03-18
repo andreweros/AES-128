@@ -1,0 +1,138 @@
+# Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do {Keyexpantion_tb.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:44 on Mar 05,2020
+# vlog -reportprogress 300 Sbox.v 
+# -- Compiling module Sbox
+# 
+# Top level modules:
+# 	Sbox
+# End time: 20:32:44 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:44 on Mar 05,2020
+# vlog -reportprogress 300 Subbytes.v 
+# -- Compiling module Subbytes
+# 
+# Top level modules:
+# 	Subbytes
+# End time: 20:32:44 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:45 on Mar 05,2020
+# vlog -reportprogress 300 Roundkeygen.v 
+# -- Compiling module RoundkeyGen
+# 
+# Top level modules:
+# 	RoundkeyGen
+# End time: 20:32:45 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:45 on Mar 05,2020
+# vlog -reportprogress 300 Keyexpantion.v 
+# -- Compiling module Keyexpantion
+# 
+# Top level modules:
+# 	Keyexpantion
+# End time: 20:32:45 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:45 on Mar 05,2020
+# vlog -reportprogress 300 Keyexpantion_tb.v 
+# -- Compiling module Keyexpantion_tb
+# 
+# Top level modules:
+# 	Keyexpantion_tb
+# End time: 20:32:45 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:45 on Mar 05,2020
+# vlog -reportprogress 300 D:/14.7/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 20:32:45 on Mar 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -gui -do "do {Keyexpantion_tb.fdo}" 
+# Start time: 20:32:46 on Mar 05,2020
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.Keyexpantion_tb(fast)
+# Loading work.Keyexpantion(fast)
+# Loading work.RoundkeyGen(fast)
+# Loading work.Subbytes(fast)
+# Loading work.Sbox(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3015) Keyexpantion_tb.v(40): [PCDPC] - Port size (1280) does not match connection size (128) for port 'W'. The port definition is at: Keyexpantion.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut File: Keyexpantion.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/RKGEN_U0/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/RKGEN_U0/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[1]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[1]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[2]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[2]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[3]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[3]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[4]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[4]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[5]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[5]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[6]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[6]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[7]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[7]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[8]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[8]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_in'. The port definition is at: Subbytes.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[9]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-3015) Roundkeygen.v(46): [PCDPC] - Port size (128) does not match connection size (32) for port 'data_out'. The port definition is at: Subbytes.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /Keyexpantion_tb/uut/ROUND_KEY_GEN[9]/RKGEN_U/SUB_U File: Subbytes.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: qiuke  Hostname: DESKTOP-P2D6LJA  ProcessID: 128
+# 
+#           Attempting to use alternate WLF file "./wlftgstxsf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftgstxsf
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 22:30:54 on Mar 05,2020, Elapsed time: 1:58:08
+# Errors: 0, Warnings: 23

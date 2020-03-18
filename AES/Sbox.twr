@@ -1,0 +1,115 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n 3
+-fastpaths -xml Sbox.twx Sbox.ncd -o Sbox.twr Sbox.pcf -ucf Sbox.ucf
+
+Design file:              Sbox.ncd
+Physical constraint file: Sbox.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+addr<0>        |dout<0>        |    7.632|
+addr<0>        |dout<1>        |    7.810|
+addr<0>        |dout<2>        |    7.528|
+addr<0>        |dout<3>        |    7.631|
+addr<0>        |dout<4>        |    7.975|
+addr<0>        |dout<5>        |    8.395|
+addr<0>        |dout<6>        |    8.401|
+addr<0>        |dout<7>        |    8.209|
+addr<1>        |dout<0>        |    7.770|
+addr<1>        |dout<1>        |    8.040|
+addr<1>        |dout<2>        |    7.415|
+addr<1>        |dout<3>        |    7.736|
+addr<1>        |dout<4>        |    8.352|
+addr<1>        |dout<5>        |    8.712|
+addr<1>        |dout<6>        |    8.724|
+addr<1>        |dout<7>        |    8.898|
+addr<2>        |dout<0>        |    7.400|
+addr<2>        |dout<1>        |    7.774|
+addr<2>        |dout<2>        |    7.414|
+addr<2>        |dout<3>        |    7.615|
+addr<2>        |dout<4>        |    7.950|
+addr<2>        |dout<5>        |    8.087|
+addr<2>        |dout<6>        |    8.312|
+addr<2>        |dout<7>        |    8.334|
+addr<3>        |dout<0>        |    7.308|
+addr<3>        |dout<1>        |    7.401|
+addr<3>        |dout<2>        |    7.754|
+addr<3>        |dout<3>        |    7.808|
+addr<3>        |dout<4>        |    7.741|
+addr<3>        |dout<5>        |    7.953|
+addr<3>        |dout<6>        |    8.189|
+addr<3>        |dout<7>        |    8.350|
+addr<4>        |dout<0>        |    7.876|
+addr<4>        |dout<1>        |    7.972|
+addr<4>        |dout<2>        |    7.360|
+addr<4>        |dout<3>        |    7.865|
+addr<4>        |dout<4>        |    8.016|
+addr<4>        |dout<5>        |    8.238|
+addr<4>        |dout<6>        |    8.241|
+addr<4>        |dout<7>        |    8.136|
+addr<5>        |dout<0>        |    7.427|
+addr<5>        |dout<1>        |    7.382|
+addr<5>        |dout<2>        |    7.478|
+addr<5>        |dout<3>        |    7.357|
+addr<5>        |dout<4>        |    7.528|
+addr<5>        |dout<5>        |    7.743|
+addr<5>        |dout<6>        |    7.527|
+addr<5>        |dout<7>        |    7.693|
+addr<6>        |dout<0>        |    6.863|
+addr<6>        |dout<1>        |    7.326|
+addr<6>        |dout<2>        |    6.894|
+addr<6>        |dout<3>        |    7.055|
+addr<6>        |dout<4>        |    7.050|
+addr<6>        |dout<5>        |    7.268|
+addr<6>        |dout<6>        |    7.093|
+addr<6>        |dout<7>        |    7.322|
+addr<7>        |dout<0>        |    7.163|
+addr<7>        |dout<1>        |    7.010|
+addr<7>        |dout<2>        |    6.866|
+addr<7>        |dout<3>        |    7.156|
+addr<7>        |dout<4>        |    6.703|
+addr<7>        |dout<5>        |    6.871|
+addr<7>        |dout<6>        |    6.873|
+addr<7>        |dout<7>        |    7.029|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 18 16:32:55 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5004 MB
+
+
+

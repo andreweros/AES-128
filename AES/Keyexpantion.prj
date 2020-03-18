@@ -1,0 +1,4 @@
+verilog work "Sbox.v"
+verilog work "Subbytes.v"
+verilog work "Roundkeygen.v"
+verilog work "Keyexpantion.v"
