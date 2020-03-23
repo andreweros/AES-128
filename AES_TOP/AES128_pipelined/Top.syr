@@ -1,0 +1,1069 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc7a200t-1-ffg1156
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" into library work
+Parsing entity <Sbox>.
+Parsing architecture <trans> of entity <sbox>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd" into library work
+Parsing entity <Subbytes_32>.
+Parsing architecture <trans> of entity <subbytes_32>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumn32.vhd" into library work
+Parsing entity <Mixcolumn32>.
+Parsing architecture <Behavioral> of entity <mixcolumn32>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes_128.vhd" into library work
+Parsing entity <Subbytes_128>.
+Parsing architecture <trans> of entity <subbytes_128>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\ShiftRows.vhd" into library work
+Parsing entity <shiftrows>.
+Parsing architecture <Behavioral> of entity <shiftrows>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd" into library work
+Parsing entity <RoundkeyGen>.
+Parsing architecture <trans> of entity <roundkeygen>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumns.vhd" into library work
+Parsing entity <Mixcolumns>.
+Parsing architecture <Behavioral> of entity <mixcolumns>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\AddRoundKey.vhd" into library work
+Parsing entity <AddRoundKey>.
+Parsing architecture <trans> of entity <addroundkey>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Round.vhd" into library work
+Parsing entity <Round>.
+Parsing architecture <trans> of entity <round>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd" into library work
+Parsing entity <Keyexpantion>.
+Parsing architecture <trans> of entity <keyexpantion>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" into library work
+Parsing entity <Top>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Keyexpantion> (architecture <trans>) from library <work>.
+
+Elaborating entity <RoundkeyGen> (architecture <trans>) from library <work>.
+
+Elaborating entity <Subbytes_32> (architecture <trans>) from library <work>.
+
+Elaborating entity <Sbox> (architecture <trans>) from library <work>.
+INFO:HDLCompiler:679 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" Line 532. Case statement is complete. others clause is never selected
+
+Elaborating entity <AddRoundKey> (architecture <trans>) with generics from library <work>.
+
+Elaborating entity <Round> (architecture <trans>) from library <work>.
+
+Elaborating entity <Subbytes_128> (architecture <trans>) from library <work>.
+
+Elaborating entity <shiftrows> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mixcolumns> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mixcolumn32> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 145: valid_shift2key should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 146: data_shift2key should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 150: valid_shift2key should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <Keyexpantion>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd".
+    Summary:
+	no macro.
+Unit <Keyexpantion> synthesized.
+
+Synthesizing Unit <RoundkeyGen>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd".
+    Found 128-bit register for signal <round_key>.
+    Found 128-bit register for signal <round_key_delay>.
+    Found 1-bit register for signal <valid_round_key>.
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred 258 D-type flip-flop(s).
+Unit <RoundkeyGen> synthesized.
+
+Synthesizing Unit <Subbytes_32>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Subbytes_32> synthesized.
+
+Synthesizing Unit <Sbox>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd".
+    Found 256x8-bit Read Only RAM for signal <dout>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Sbox> synthesized.
+
+Synthesizing Unit <AddRoundKey>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\AddRoundKey.vhd".
+        DATA_W = 128
+    Found 128-bit register for signal <data_out>.
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <AddRoundKey> synthesized.
+
+Synthesizing Unit <Round>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Round.vhd".
+    Summary:
+	no macro.
+Unit <Round> synthesized.
+
+Synthesizing Unit <Subbytes_128>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes_128.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Subbytes_128> synthesized.
+
+Synthesizing Unit <shiftrows>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\ShiftRows.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Found 128-bit register for signal <data_out>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <shiftrows> synthesized.
+
+Synthesizing Unit <Mixcolumns>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumns.vhd".
+    Found 128-bit register for signal <mixout>.
+    Found 1-bit register for signal <finish>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <Mixcolumns> synthesized.
+
+Synthesizing Unit <Mixcolumn32>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumn32.vhd".
+    Summary:
+Unit <Mixcolumn32> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 200
+ 256x8-bit single-port Read Only RAM                   : 200
+# Registers                                            : 120
+ 1-bit register                                        : 70
+ 128-bit register                                      : 50
+# Multiplexers                                         : 2
+ 128-bit 2-to-1 multiplexer                            : 2
+# Xors                                                 : 1357
+ 1-bit xor2                                            : 144
+ 1-bit xor4                                            : 144
+ 1-bit xor5                                            : 576
+ 1-bit xor6                                            : 432
+ 128-bit xor2                                          : 11
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Round>.
+INFO:Xst:3226 - The RAM <U_SUB/ROM[15].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[14].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[13].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[12].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[11].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<95:88>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[10].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<87:80>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[9].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<79:72>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[7].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<63:56>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[8].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<71:64>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[6].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<55:48>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[5].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<47:40>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[4].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<39:32>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[3].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[2].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[1].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[0].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<7:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Round> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top>.
+INFO:Xst:3226 - The RAM <U_SUB/ROM[15].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[13].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[14].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[12].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[10].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><87:80>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[11].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><95:88>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[9].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><79:72>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[7].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><63:56>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[8].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><71:64>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[6].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><55:48>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[4].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><39:32>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[5].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><47:40>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[3].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[1].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[2].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[0].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 200
+ 256x8-bit single-port block Read Only RAM             : 160
+ 256x8-bit single-port distributed Read Only RAM       : 40
+# Registers                                            : 5190
+ Flip-Flops                                            : 5190
+# Multiplexers                                         : 2
+ 128-bit 2-to-1 multiplexer                            : 2
+# Xors                                                 : 1357
+ 1-bit xor2                                            : 144
+ 1-bit xor4                                            : 144
+ 1-bit xor5                                            : 576
+ 1-bit xor6                                            : 432
+ 128-bit xor2                                          : 11
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[15].u_sbox/Mram_dout>, <U_SUB/ROM[13].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[15].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[14].u_sbox/Mram_dout>, <U_SUB/ROM[12].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[14].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[10].u_sbox/Mram_dout>, <U_SUB/ROM[11].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[10].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[9].u_sbox/Mram_dout>, <U_SUB/ROM[7].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[9].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[8].u_sbox/Mram_dout>, <U_SUB/ROM[6].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[8].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[4].u_sbox/Mram_dout>, <U_SUB/ROM[5].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[4].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[3].u_sbox/Mram_dout>, <U_SUB/ROM[1].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[3].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[2].u_sbox/Mram_dout>, <U_SUB/ROM[0].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[2].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[15].u_sbox/Mram_dout>, <U_SUB/ROM[14].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[15].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[13].u_sbox/Mram_dout>, <U_SUB/ROM[12].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[13].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[11].u_sbox/Mram_dout>, <U_SUB/ROM[10].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[11].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[9].u_sbox/Mram_dout>, <U_SUB/ROM[7].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[9].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[8].u_sbox/Mram_dout>, <U_SUB/ROM[6].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[8].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[5].u_sbox/Mram_dout>, <U_SUB/ROM[4].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[5].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[3].u_sbox/Mram_dout>, <U_SUB/ROM[2].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[3].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[1].u_sbox/Mram_dout>, <U_SUB/ROM[0].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[1].u_sbox/Mram_dout1>
+
+Optimizing unit <Keyexpantion> ...
+
+Optimizing unit <Top> ...
+
+Optimizing unit <RoundkeyGen> ...
+
+Optimizing unit <AddRoundKey> ...
+
+Optimizing unit <Mixcolumns> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5190
+ Flip-Flops                                            : 5190
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6545
+#      GND                         : 1
+#      INV                         : 11
+#      LUT2                        : 2053
+#      LUT3                        : 320
+#      LUT4                        : 448
+#      LUT5                        : 1040
+#      LUT6                        : 1712
+#      MUXF7                       : 640
+#      MUXF8                       : 320
+# FlipFlops/Latches                : 5190
+#      FDC                         : 70
+#      FDCE                        : 5120
+# RAMS                             : 80
+#      RAMB18E1                    : 80
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 388
+#      IBUF                        : 259
+#      OBUF                        : 129
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a200tffg1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            5190  out of  269200     1%  
+ Number of Slice LUTs:                 5584  out of  134600     4%  
+    Number used as Logic:              5584  out of  134600     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6908
+   Number with an unused Flip Flop:    1718  out of   6908    24%  
+   Number with an unused LUT:          1324  out of   6908    19%  
+   Number of fully used LUT-FF pairs:  3866  out of   6908    55%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                         389
+ Number of bonded IOBs:                 389  out of    500    77%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               40  out of    365    10%  
+    Number using Block RAM only:         40
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 5270  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                     | Load  |
+-----------------------------------+-------------------------------------+-------+
+N1(XST_GND:G)                      | NONE(U_SUB/ROM[9].u_sbox/Mram_dout1)| 160   |
+-----------------------------------+-------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.716ns (Maximum Frequency: 269.107MHz)
+   Minimum input arrival time before clock: 2.476ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.716ns (frequency: 269.107MHz)
+  Total number of paths / destination ports: 52366 / 11364
+-------------------------------------------------------------------------
+Delay:               3.716ns (Levels of Logic = 2)
+  Source:            ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 (RAM)
+  Destination:       ROUND_GEN[0].ROUND_U/U_MIX/mixout_124 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 to ROUND_GEN[0].ROUND_U/U_MIX/mixout_124
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO4    5   2.454   0.563  ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 (ROUND_GEN[0].ROUND_U/data_shift2mix<108>)
+     LUT2:I0->O            1   0.124   0.421  ROUND_GEN[0].ROUND_U/U_MIX/p3<4>_SW0 (N78)
+     LUT6:I5->O            1   0.124   0.000  ROUND_GEN[0].ROUND_U/U_MIX/p3<4> (ROUND_GEN[0].ROUND_U/U_MIX/p3<4>)
+     FDCE:D                    0.030          ROUND_GEN[0].ROUND_U/U_MIX/mixout_100
+    ----------------------------------------
+    Total                      3.716ns (2.732ns logic, 0.984ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4579 / 674
+-------------------------------------------------------------------------
+Offset:              2.476ns (Levels of Logic = 5)
+  Source:            cipher_key<16> (PAD)
+  Destination:       U_KEYEXP/RKGEN_U0/round_key_delay_127 (FF)
+  Destination Clock: clk rising
+
+  Data Path: cipher_key<16> to U_KEYEXP/RKGEN_U0/round_key_delay_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   0.001   1.092  cipher_key_16_IBUF (cipher_key_16_IBUF)
+     LUT6:I0->O            1   0.124   0.000  U_KEYEXP/RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout23 (U_KEYEXP/RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout23)
+     MUXF7:I1->O           1   0.368   0.000  U_KEYEXP/RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f7_0 (U_KEYEXP/RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f71)
+     MUXF8:I0->O           4   0.296   0.441  U_KEYEXP/RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f8 (U_KEYEXP/RKGEN_U0/Key_SubBytes<25>)
+     LUT2:I1->O            1   0.124   0.000  U_KEYEXP/RKGEN_U0/temp_round_key<121>1 (U_KEYEXP/RKGEN_U0/temp_round_key<121>)
+     FDCE:D                    0.030          U_KEYEXP/RKGEN_U0/round_key_delay_121
+    ----------------------------------------
+    Total                      2.476ns (0.943ns logic, 1.533ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            U_KEY/data_out_127 (FF)
+  Destination:       cipher_text<127> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U_KEY/data_out_127 to cipher_text<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.478   0.399  U_KEY/data_out_127 (U_KEY/data_out_127)
+     OBUF:I->O                 0.000          cipher_text_127_OBUF (cipher_text<127>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.716|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 31.70 secs
+ 
+--> 
+
+Total memory usage is 4684212 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   48 (   0 filtered)
+

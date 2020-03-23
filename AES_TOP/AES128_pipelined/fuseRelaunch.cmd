@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "E:/AES128_Fpga/AES_TOP/AES128_pipelined/Roundkeygen_tb_isim_beh.exe" -prj "E:/AES128_Fpga/AES_TOP/AES128_pipelined/Roundkeygen_tb_beh.prj" "work.Roundkeygen_tb" 

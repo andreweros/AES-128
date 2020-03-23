@@ -1,0 +1,185 @@
+# Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do {TOP_tb.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:46:59 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Sbox.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Sbox
+# -- Compiling architecture trans of Sbox
+# End time: 16:46:59 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:46:59 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Subbytes.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Subbytes_32
+# -- Compiling architecture trans of Subbytes_32
+# End time: 16:46:59 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:46:59 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Mixcolumn32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mixcolumn32
+# -- Compiling architecture Behavioral of Mixcolumn32
+# End time: 16:46:59 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Subbytes_128.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Subbytes_128
+# -- Compiling architecture trans of Subbytes_128
+# End time: 16:47:00 on Mar 23,2020, Elaps# End time: 17:27:29 on Mar 23,2020, Elapsed time: 0:47:30
+# Errors: 0, Warnings: 0
+4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 ShiftRows.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shiftrows
+# -- Compiling architecture Behavioral of shiftrows
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 RoundkeyGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RoundkeyGen
+# -- Compiling architecture trans of RoundkeyGen
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Mixcolumns.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mixcolumns
+# -- Compiling architecture Behavioral of Mixcolumns
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 AddRoundKey.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity AddRoundKey
+# -- Compiling architecture trans of AddRoundKey
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Round.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Round
+# -- Compiling architecture trans of Round
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Keyexpantion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Keyexpantion
+# -- Compiling architecture trans of Keyexpantion
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 Top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Top
+# -- Compiling architecture Behavioral of Top
+# End time: 16:47:00 on Mar 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:47:00 on Mar 23,2020
+# vcom -reportprogress 300 -explicit -93 TOP_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TOP_tb
+# -- Compiling architecture behavior of TOP_tb
+# End time: 16:47:01 on Mar 23,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -gui -do "do {TOP_tb.fdo}" 
+# Start time: 16:47:01 on Mar 23,2020
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_tb(behavior)#1
+# Loading work.top(behavioral)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.keyexpantion(trans)#1
+# Loading work.roundkeygen(trans)#1
+# Loading work.subbytes_32(trans)#1
+# Loading work.sbox(trans)#1
+# Loading work.addroundkey(trans)#1
+# Loading work.round(trans)#1
+# Loading work.subbytes_128(trans)#1
+# Loading work.shiftrows(behavioral)#1
+# Loading work.mixcolumns(behavioral)#1
+# Loading work.mixcolumn32(behavioral)#1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: qiuke  Hostname: DESKTOP-P2D6LJA  ProcessID: 16052
+# 
+#           Attempting to use alternate WLF file "./wlft44m59s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft44m59s
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 16:48:32 on Mar 23,2020, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 2

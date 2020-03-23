@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 145: <arg fmt="%s" index="1">valid_shift2key</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 146: <arg fmt="%s" index="1">data_shift2key</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 150: <arg fmt="%s" index="1">valid_shift2key</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[15].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[14].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[13].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[12].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[11].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[10].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[9].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[7].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[8].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[6].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[5].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[4].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[3].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[2].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[1].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[0].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[15].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[13].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[14].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[12].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[10].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[11].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[9].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[7].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[8].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[6].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[4].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[5].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[3].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[1].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[2].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">U_SUB/ROM[0].u_sbox/Mram_dout</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[15].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[13].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[15].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[14].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[12].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[14].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[10].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[11].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[10].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[9].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[7].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[9].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[8].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[6].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[8].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[4].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[5].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[4].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[3].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[1].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[3].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[2].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[0].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[2].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[15].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[14].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[15].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[13].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[12].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[13].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[11].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[10].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[11].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[9].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[7].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[9].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[8].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[6].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[8].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[5].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[4].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[5].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[3].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[2].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[3].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[1].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[0].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[1].u_sbox/Mram_dout1</arg>&gt;
+</msg>
+
+</messages>
+

@@ -1,0 +1,7 @@
+vhdl work "Sbox.vhd"
+vhdl work "Mixcolumn32.vhd"
+vhdl work "Subbytes_128.vhd"
+vhdl work "ShiftRows.vhd"
+vhdl work "Mixcolumns.vhd"
+vhdl work "AddRoundKey.vhd"
+vhdl work "Round.vhd"

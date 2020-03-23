@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/AES128_Fpga/AES_TOP/AES128_pipelined/Mixcolumns.xst" -ofn "E:/AES128_Fpga/AES_TOP/AES128_pipelined/Mixcolumns.syr" 
