@@ -1,0 +1,1642 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Interface.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Interface.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Interface"
+Output Format                      : NGC
+Target Device                      : xc7a200t-1-ffg1156
+
+---- Source Options
+Top Module Name                    : Interface
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" into library work
+Parsing entity <Sbox>.
+Parsing architecture <trans> of entity <sbox>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd" into library work
+Parsing entity <Subbytes_32>.
+Parsing architecture <trans> of entity <subbytes_32>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumn32.vhd" into library work
+Parsing entity <Mixcolumn32>.
+Parsing architecture <Behavioral> of entity <mixcolumn32>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes_128.vhd" into library work
+Parsing entity <Subbytes_128>.
+Parsing architecture <trans> of entity <subbytes_128>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\ShiftRows.vhd" into library work
+Parsing entity <shiftrows>.
+Parsing architecture <Behavioral> of entity <shiftrows>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd" into library work
+Parsing entity <RoundkeyGen>.
+Parsing architecture <trans> of entity <roundkeygen>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumns.vhd" into library work
+Parsing entity <Mixcolumns>.
+Parsing architecture <Behavioral> of entity <mixcolumns>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\AddRoundKey.vhd" into library work
+Parsing entity <AddRoundKey>.
+Parsing architecture <trans> of entity <addroundkey>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Round.vhd" into library work
+Parsing entity <Round>.
+Parsing architecture <trans> of entity <round>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd" into library work
+Parsing entity <Keyexpantion>.
+Parsing architecture <trans> of entity <keyexpantion>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" into library work
+Parsing entity <Top>.
+Parsing architecture <Behavioral> of entity <top>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Interface.vhd" into library work
+Parsing entity <Interface>.
+Parsing architecture <Behavioral> of entity <interface>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Interface> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Keyexpantion> (architecture <trans>) from library <work>.
+
+Elaborating entity <RoundkeyGen> (architecture <trans>) from library <work>.
+
+Elaborating entity <Subbytes_32> (architecture <trans>) from library <work>.
+
+Elaborating entity <Sbox> (architecture <trans>) from library <work>.
+INFO:HDLCompiler:679 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" Line 532. Case statement is complete. others clause is never selected
+
+Elaborating entity <AddRoundKey> (architecture <trans>) with generics from library <work>.
+
+Elaborating entity <Round> (architecture <trans>) from library <work>.
+
+Elaborating entity <Subbytes_128> (architecture <trans>) from library <work>.
+
+Elaborating entity <shiftrows> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mixcolumns> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Mixcolumn32> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 145: valid_shift2key should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 146: data_shift2key should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd" Line 150: valid_shift2key should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Interface>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Interface.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Found 128-bit register for signal <key>.
+    Found 128-bit register for signal <text_in>.
+    Found 1-bit register for signal <valid_in_delay>.
+    Summary:
+	inferred 258 D-type flip-flop(s).
+Unit <Interface> synthesized.
+
+Synthesizing Unit <Top>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Top.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <Keyexpantion>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd".
+    Summary:
+	no macro.
+Unit <Keyexpantion> synthesized.
+
+Synthesizing Unit <RoundkeyGen>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd".
+    Found 128-bit register for signal <round_key>.
+    Found 128-bit register for signal <round_key_delay>.
+    Found 1-bit register for signal <valid_round_key>.
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred 258 D-type flip-flop(s).
+Unit <RoundkeyGen> synthesized.
+
+Synthesizing Unit <Subbytes_32>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Subbytes_32> synthesized.
+
+Synthesizing Unit <Sbox>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd".
+    Found 256x8-bit Read Only RAM for signal <dout>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Sbox> synthesized.
+
+Synthesizing Unit <AddRoundKey>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\AddRoundKey.vhd".
+        DATA_W = 128
+    Found 128-bit register for signal <data_out>.
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <AddRoundKey> synthesized.
+
+Synthesizing Unit <Round>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Round.vhd".
+    Summary:
+	no macro.
+Unit <Round> synthesized.
+
+Synthesizing Unit <Subbytes_128>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes_128.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Subbytes_128> synthesized.
+
+Synthesizing Unit <shiftrows>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\ShiftRows.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Found 128-bit register for signal <data_out>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <shiftrows> synthesized.
+
+Synthesizing Unit <Mixcolumns>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumns.vhd".
+    Found 128-bit register for signal <mixout>.
+    Found 1-bit register for signal <finish>.
+    Summary:
+	inferred 129 D-type flip-flop(s).
+Unit <Mixcolumns> synthesized.
+
+Synthesizing Unit <Mixcolumn32>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Mixcolumn32.vhd".
+    Summary:
+Unit <Mixcolumn32> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 200
+ 256x8-bit single-port Read Only RAM                   : 200
+# Registers                                            : 124
+ 1-bit register                                        : 72
+ 128-bit register                                      : 52
+# Multiplexers                                         : 2
+ 128-bit 2-to-1 multiplexer                            : 2
+# Xors                                                 : 1357
+ 1-bit xor2                                            : 144
+ 1-bit xor4                                            : 144
+ 1-bit xor5                                            : 576
+ 1-bit xor6                                            : 432
+ 128-bit xor2                                          : 11
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <text_in_40> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_41> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_42> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_45> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_46> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_49> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_50> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_51> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_54> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_55> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_57> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_58> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_59> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_62> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_63> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_65> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_68> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_12> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_13> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_14> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_15> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_19> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_22> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_23> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_24> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_25> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_26> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_27> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_28> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_32> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_34> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_35> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_36> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_38> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_96> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_97> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_98> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_100> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_102> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_104> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_107> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_114> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_115> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_116> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_117> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_119> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_120> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_122> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_123> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_126> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_127> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_69> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_70> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_72> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_73> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_74> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_75> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_78> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_79> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_80> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_82> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_85> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_87> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_88> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_89> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_90> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_92> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_93> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_94> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_34> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_36> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_37> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_38> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_41> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_43> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_45> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_46> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_47> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_51> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_58> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_60> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_62> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_64> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_67> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_68> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_70> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_0> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_1> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_6> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_7> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_12> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_13> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_15> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_20> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_21> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_25> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_26> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_28> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_29> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_30> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_31> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_32> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_33> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_105> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_107> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_109> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_110> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_111> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_112> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_119> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_122> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_124> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_126> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_127> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_0> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_1> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_3> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_6> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_7> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_11> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_72> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_74> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_75> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_77> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_80> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_84> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_86> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_88> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_89> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_90> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_92> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_94> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_95> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_96> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_99> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_101> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_102> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_103> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Round>.
+INFO:Xst:3226 - The RAM <U_SUB/ROM[15].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[14].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[13].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[12].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[11].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<95:88>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[10].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<87:80>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[9].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<79:72>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[7].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<63:56>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[8].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<71:64>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[6].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<55:48>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[5].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<47:40>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[4].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<39:32>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[3].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[2].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[1].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[0].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_in<7:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2mix> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Round> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top>.
+INFO:Xst:3226 - The RAM <U_SUB/ROM[15].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[13].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[14].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[12].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[10].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><87:80>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[11].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><95:88>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[9].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><79:72>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[7].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><63:56>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[8].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><71:64>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[6].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><55:48>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[4].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><39:32>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[5].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><47:40>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[3].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[1].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[2].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U_SUB/ROM[0].u_sbox/Mram_dout> will be implemented as a BLOCK RAM, absorbing the following register(s): <U_SH/data_out_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <data_round<9><7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_shift2key> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 200
+ 256x8-bit single-port block Read Only RAM             : 160
+ 256x8-bit single-port distributed Read Only RAM       : 40
+# Registers                                            : 5448
+ Flip-Flops                                            : 5448
+# Multiplexers                                         : 2
+ 128-bit 2-to-1 multiplexer                            : 2
+# Xors                                                 : 1357
+ 1-bit xor2                                            : 144
+ 1-bit xor4                                            : 144
+ 1-bit xor5                                            : 576
+ 1-bit xor6                                            : 432
+ 128-bit xor2                                          : 11
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <key_28> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_29> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_30> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_31> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_32> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_33> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_34> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_36> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_37> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_38> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_41> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_43> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_45> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_46> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_47> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_51> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_58> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_119> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_120> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_122> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_123> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_126> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_127> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_0> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_1> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_6> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_7> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_12> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_13> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_15> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_20> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_21> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_25> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_26> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_95> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_96> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_99> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_101> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_102> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_103> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_105> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_107> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_109> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_110> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_111> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_112> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_119> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_122> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_124> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_126> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_127> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_60> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_62> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_64> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_67> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_68> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_70> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_72> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_74> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_75> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_77> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_80> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_84> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_86> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_88> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_89> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_90> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_92> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <key_94> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_28> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_32> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_34> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_35> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_36> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_38> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_40> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_41> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_42> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_45> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_46> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_49> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_50> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_51> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_54> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_55> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_57> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_0> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_1> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_3> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_6> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_7> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_11> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_12> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_13> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_14> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_15> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_19> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_22> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_23> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_24> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_25> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_26> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_27> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_88> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_89> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_90> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_92> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_93> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_94> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_96> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_97> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_98> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_100> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_102> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_104> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_107> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_114> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_115> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_116> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_117> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_58> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_59> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_62> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_63> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_65> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_68> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_69> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_70> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_72> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_73> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_74> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_75> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_78> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_79> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_80> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_82> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_85> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <text_in_87> has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[15].u_sbox/Mram_dout>, <U_SUB/ROM[13].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[15].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[14].u_sbox/Mram_dout>, <U_SUB/ROM[12].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[14].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[10].u_sbox/Mram_dout>, <U_SUB/ROM[11].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[10].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[9].u_sbox/Mram_dout>, <U_SUB/ROM[7].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[9].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[8].u_sbox/Mram_dout>, <U_SUB/ROM[6].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[8].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[4].u_sbox/Mram_dout>, <U_SUB/ROM[5].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[4].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[3].u_sbox/Mram_dout>, <U_SUB/ROM[1].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[3].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[2].u_sbox/Mram_dout>, <U_SUB/ROM[0].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[2].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[15].u_sbox/Mram_dout>, <U_SUB/ROM[14].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[15].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[13].u_sbox/Mram_dout>, <U_SUB/ROM[12].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[13].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[11].u_sbox/Mram_dout>, <U_SUB/ROM[10].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[11].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[9].u_sbox/Mram_dout>, <U_SUB/ROM[7].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[9].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[8].u_sbox/Mram_dout>, <U_SUB/ROM[6].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[8].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[5].u_sbox/Mram_dout>, <U_SUB/ROM[4].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[5].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[3].u_sbox/Mram_dout>, <U_SUB/ROM[2].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[3].u_sbox/Mram_dout1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <U_SUB/ROM[1].u_sbox/Mram_dout>, <U_SUB/ROM[0].u_sbox/Mram_dout> are packed into the single block RAM <U_SUB/ROM[1].u_sbox/Mram_dout1>
+
+Optimizing unit <Keyexpantion> ...
+
+Optimizing unit <Interface> ...
+
+Optimizing unit <Top> ...
+
+Optimizing unit <RoundkeyGen> ...
+
+Optimizing unit <AddRoundKey> ...
+
+Optimizing unit <Mixcolumns> ...
+WARNING:Xst:1710 - FF/Latch <U_TOP/U0_ARK/data_out_62> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_58> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_51> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_46> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_45> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_41> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_38> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_36> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_34> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_32> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_28> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_26> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_25> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_15> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_13> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_12> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_7> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_6> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_1> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_0> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_103> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_127> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_126> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_122> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_119> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_107> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_102> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_96> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_94> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_92> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_90> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_89> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_88> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_80> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_75> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_74> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_72> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_70> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_68> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_103> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U_TOP/U0_ARK/data_out_2> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_4> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_5> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_8> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_9> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_10> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_16> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_17> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_18> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_39> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_44> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_48> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_52> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_53> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_56> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_61> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_66> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_71> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_76> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_81> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_83> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_91> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_106> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_108> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_113> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_118> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_121> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U0_ARK/data_out_125> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_7> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_39> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_7> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_39> (without init value) has a constant value of 0 in block <Interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <text_in_2> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_4> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_5> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_8> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_9> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_10> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_16> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_17> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_18> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_39> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_44> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_48> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_52> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_53> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_56> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_61> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_66> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_71> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_76> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_81> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_83> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_91> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_106> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_108> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_113> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_118> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_121> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <text_in_125> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <key_39> of sequential type is unconnected in block <Interface>.
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_9> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_105> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_78> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_46> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_83> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_51> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_delay_103> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_delay_39> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_64> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_0> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_70> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_6> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_65> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_1> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_71> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_39> <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_7> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_76> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_12> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_77> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_13> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_84> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_20> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_79> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_15> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_90> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_26> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_85> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_21> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_92> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_28> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_93> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_29> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_94> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_30> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_89> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_25> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_100> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_36> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_95> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_31> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_101> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_37> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_96> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_32> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_102> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_38> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_97> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_33> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_0> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_64> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_98> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_34> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_1> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_65> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_110> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_46> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_105> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_41> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_111> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_47> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_107> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_43> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_6> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_70> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_109> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_45> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_7> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_71> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_115> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_51> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_122> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_58> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_124> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_60> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_126> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_62> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U0_ARK/data_out_120> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U0_ARK/data_out_124> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_7> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_71> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_12> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_76> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_13> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_77> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_20> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_84> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_15> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_79> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_21> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_85> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_delay_71> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_delay_7> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_30> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_94> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_25> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_89> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_31> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_95> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_26> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_90> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_28> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_92> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_29> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_93> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_100> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_68> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_36> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_101> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_5> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_102> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_70> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_38> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_6> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_104> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_72> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_8> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_110> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_14> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_105> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_9> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_106> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_74> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_10> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_112> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_80> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_16> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_107> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_75> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_43> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_113> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_49> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_108> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_44> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_12> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_109> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_77> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_45> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_13> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_114> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_50> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_120> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_88> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_24> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_115> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_19> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_121> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_89> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_116> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_84> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_122> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_90> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_58> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_26> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_117> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_53> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_21> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_118> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_86> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_22> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_123> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_59> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_124> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_92> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_60> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_28> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_119> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_55> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_125> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_61> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_29> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_126> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_94> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_62> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_30> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_127> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_95> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_100> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_36> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_101> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_37> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_102> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_38> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_110> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_46> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_105> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_41> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_111> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_47> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_96> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_32> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_107> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_43> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_97> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_33> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_98> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_34> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_109> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_45> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_115> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_51> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_122> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_58> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_124> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_60> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_126> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_62> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_100> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_68> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_36> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_107> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_75> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_43> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_113> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_49> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_114> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_50> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_121> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_89> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_116> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_84> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_123> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_59> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_119> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_55> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_127> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_95> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_52> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_20> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_57> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_25> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_63> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_31> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_65> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_33> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_1> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_10> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_106> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_66> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_34> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_12> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_108> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_73> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_41> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_13> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_109> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_69> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_37> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_14> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_110> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_15> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_79> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_81> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_17> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_20> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_52> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_21> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_117> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_82> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_18> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_16> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_112> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_22> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_118> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_78> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_46> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_83> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_51> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_17> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_81> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_23> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_87> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_79> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_47> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_15> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_18> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_82> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_24> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_120> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_19> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_115> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_30> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_126> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_91> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_27> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_25> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_57> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_26> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_122> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_87> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_23> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_31> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_63> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_27> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_91> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_28> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_124> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_29> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_125> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_96> in Unit <Interface> is equivalent to the following 3 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_64> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_32> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_0> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_98> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_2> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_99> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_67> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_delay_3> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_103> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[2].RKGEN_U/round_key_39> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_0> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_96> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_1> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_65> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_2> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_98> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_66> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_34> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_3> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_99> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_73> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_41> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_5> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_101> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_69> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_37> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_6> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_102> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_8> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_104> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_47> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_15> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_64> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_32> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_0> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_33> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_1> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_67> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_3> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_39> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/round_key_7> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_70> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_38> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_6> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_72> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_8> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_74> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_10> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_80> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_16> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_44> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_12> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_77> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_45> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_13> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_88> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_24> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_53> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_21> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_90> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_58> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_26> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_86> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_22> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_92> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_60> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_28> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_61> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_29> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/round_key_94> in Unit <Interface> is equivalent to the following 2 FFs/Latches, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/round_key_62> <U_TOP/U_KEYEXP/RKGEN_U0/round_key_30> 
+
+Mapping all equations...
+WARNING:Xst:2677 - Node <text_in_124> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <key_44> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <key_53> of sequential type is unconnected in block <Interface>.
+WARNING:Xst:2677 - Node <key_61> of sequential type is unconnected in block <Interface>.
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/RKGEN_U0/SUB_U/valid_out> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U0_ARK/valid_out> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/ROUND_GEN[0].ROUND_U/U_SUB/valid_out> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/valid_round_key> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/ROUND_GEN[0].ROUND_U/U_SH/valid_out> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/U_KEYEXP/RKGEN_U0/valid_out> 
+INFO:Xst:2261 - The FF/Latch <U_TOP/U_KEYEXP/ROUND_KEY_GEN[1].RKGEN_U/SUB_U/valid_out> in Unit <Interface> is equivalent to the following FF/Latch, which will be removed : <U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/finish> 
+Found area constraint ratio of 100 (+ 5) on block Interface, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4998
+ Flip-Flops                                            : 4998
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Interface.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6292
+#      GND                         : 1
+#      INV                         : 13
+#      LUT2                        : 1947
+#      LUT3                        : 310
+#      LUT4                        : 367
+#      LUT5                        : 953
+#      LUT6                        : 1723
+#      MUXCY                       : 22
+#      MUXF7                       : 636
+#      MUXF8                       : 319
+#      VCC                         : 1
+# FlipFlops/Latches                : 4998
+#      FD                          : 1
+#      FDC                         : 67
+#      FDCE                        : 4845
+#      FDS                         : 85
+# RAMS                             : 80
+#      RAMB18E1                    : 80
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a200tffg1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4998  out of  269200     1%  
+ Number of Slice LUTs:                 5313  out of  134600     3%  
+    Number used as Logic:              5313  out of  134600     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6670
+   Number with an unused Flip Flop:    1672  out of   6670    25%  
+   Number with an unused LUT:          1357  out of   6670    20%  
+   Number of fully used LUT-FF pairs:  3641  out of   6670    54%  
+   Number of unique control sets:        43
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    500     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               40  out of    365    10%  
+    Number using Block RAM only:         40
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 5078  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------+-----------------------------------------------------------------+-------+
+Control Signal                                        | Buffer(FF name)                                                 | Load  |
+------------------------------------------------------+-----------------------------------------------------------------+-------+
+U_TOP/U_KEYEXP/RKGEN_U0/temp_round_key<103>(XST_GND:G)| NONE(U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[15].u_sbox/Mram_dout1)| 160   |
+------------------------------------------------------+-----------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.716ns (Maximum Frequency: 269.107MHz)
+   Minimum input arrival time before clock: 2.207ns
+   Maximum output required time after clock: 0.883ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.716ns (frequency: 269.107MHz)
+  Total number of paths / destination ports: 51934 / 11217
+-------------------------------------------------------------------------
+Delay:               3.716ns (Levels of Logic = 2)
+  Source:            U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 (RAM)
+  Destination:       U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/mixout_124 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 to U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/mixout_124
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO4    5   2.454   0.563  U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[5].u_sbox/Mram_dout1 (U_TOP/ROUND_GEN[0].ROUND_U/data_shift2mix<108>)
+     LUT2:I0->O            1   0.124   0.421  U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/p3<4>_SW0 (N78)
+     LUT6:I5->O            1   0.124   0.000  U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/p3<4> (U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/p3<4>)
+     FDCE:D                    0.030          U_TOP/ROUND_GEN[0].ROUND_U/U_MIX/mixout_100
+    ----------------------------------------
+    Total                      3.716ns (2.732ns logic, 0.984ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 461 / 375
+-------------------------------------------------------------------------
+Offset:              2.207ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[15].u_sbox/Mram_dout1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: reset to U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[15].u_sbox/Mram_dout1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           141   0.001   0.597  reset_IBUF (reset_IBUF)
+     LUT2:I1->O            1   0.124   0.399  U_TOP/ROUND_GEN[0].ROUND_U/U_SH/_n00121 (U_TOP/ROUND_GEN[0].ROUND_U/U_SH/_n0012)
+     INV:I->O             16   0.146   0.497  U_TOP/ROUND_GEN[0].ROUND_U_U_SH/_n0012_inv_INV_0 (U_TOP/ROUND_GEN[0].ROUND_U_U_SH/_n0012_inv)
+     RAMB18E1:ENARDEN          0.443          U_TOP/ROUND_GEN[0].ROUND_U_U_SUB/ROM[1].u_sbox/Mram_dout1
+    ----------------------------------------
+    Total                      2.207ns (0.714ns logic, 1.493ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.883ns (Levels of Logic = 1)
+  Source:            valid_out (FF)
+  Destination:       valid_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: valid_out to valid_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.478   0.405  valid_out (valid_out_OBUF)
+     OBUF:I->O                 0.000          valid_out_OBUF (valid_out)
+    ----------------------------------------
+    Total                      0.883ns (0.478ns logic, 0.405ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.716|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 36.75 secs
+ 
+--> 
+
+Total memory usage is 4684204 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  384 (   0 filtered)
+Number of infos    :  221 (   0 filtered)
+

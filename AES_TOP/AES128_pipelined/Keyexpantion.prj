@@ -1,0 +1,4 @@
+vhdl work "Sbox.vhd"
+vhdl work "Subbytes.vhd"
+vhdl work "RoundkeyGen.vhd"
+vhdl work "Keyexpantion.vhd"

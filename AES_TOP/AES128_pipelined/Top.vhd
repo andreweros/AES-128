@@ -77,8 +77,8 @@ Component Keyexpantion IS
       reset       : IN STD_LOGIC;
       valid_in    : IN STD_LOGIC;
       cipher_key  : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-      W           : OUT STD_LOGIC_VECTOR((10 * 128) - 1 DOWNTO 0);
-      valid_out   : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+      W           : OUT STD_LOGIC_VECTOR((11 * 128)-1  DOWNTO 0);
+      valid_out   : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
    );
 END Component;
 
@@ -97,17 +97,17 @@ END Component;
 
 TYPE data_array IS ARRAY (0 TO 9) OF STD_LOGIC_VECTOR(127 DOWNTO 0);
 
-signal valid_round_key : STD_LOGIC_VECTOR(9 DOWNTO 0);            --all round keys valid signals KeyExpantion output
+signal valid_round_key : STD_LOGIC_VECTOR(10 DOWNTO 0);            --all round keys valid signals KeyExpantion output
 signal valid_round_data : STD_LOGIC_VECTOR(9 DOWNTO 0);         --all rounds ouput data valid signals
 signal data_round : data_array;    										--all rounds data
 signal valid_sub2shift : std_logic;                            --for final round connection
 signal valid_shift2key : std_logic;                            
 signal data_sub2shift : std_logic_vector(127 downto 0);                
 signal data_shift2key : std_logic_vector(127 downto 0);                 
-signal W : STD_LOGIC_VECTOR((10 * 128) - 1 DOWNTO 0);                 --all round keys
+signal W : STD_LOGIC_VECTOR((11 * 128) - 1 DOWNTO 0);                 --all round keys
 
 
-signal data_shift2key_delayed : std_logic_vector(127 downto 0) ;           --for delay register
+signal data_shift2key_delayed : std_logic_vector(127 downto 0) ;           --for last round delay register
 signal valid_shift2key_delayed : std_logic ;
  
 begin
@@ -118,7 +118,7 @@ PORT MAP
 
 U0_ARK : AddRoundKey
 PORT MAP
-(clk,reset,data_valid_in,cipherkey_valid_in,plain_text,cipher_key,valid_round_data(0),data_round(0));
+(clk,reset,data_valid_in,valid_round_key(10),plain_text,W(11*128 - 1 downto 10*128),valid_round_data(0),data_round(0));
 
    ROUND_GEN : FOR i IN 0 to 8 GENERATE
       ROUND_U : Round

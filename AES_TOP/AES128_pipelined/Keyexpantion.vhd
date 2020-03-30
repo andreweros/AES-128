@@ -10,8 +10,8 @@ ENTITY Keyexpantion IS
       reset       : IN STD_LOGIC;
       valid_in    : IN STD_LOGIC;
       cipher_key  : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-      W           : OUT STD_LOGIC_VECTOR((10 * 128) - 1 DOWNTO 0);
-      valid_out   : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+      W           : OUT STD_LOGIC_VECTOR((11 * 128)-1  DOWNTO 0);
+      valid_out   : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
    );
 END Keyexpantion;
 
@@ -76,10 +76,9 @@ BEGIN
          );
    END GENERATE;
    
-   W <= (W_array(0) & W_array(1) & W_array(2) & W_array(3) & W_array(4) & W_array(5) & W_array(6) & W_array(7) & W_array(8) & W_array(9));
-   
-   valid_out <= keygen_valid_out;
-   
+			W <= (cipher_key & W_array(0) & W_array(1) & W_array(2) & W_array(3) & W_array(4) & W_array(5) & W_array(6) & W_array(7) & W_array(8) & W_array(9));
+			valid_out <= '1' & keygen_valid_out;
+	
 END trans;
 
 

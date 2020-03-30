@@ -1,0 +1,446 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: Keyexpantion.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Keyexpantion.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Keyexpantion"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : Keyexpantion
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" into library work
+Parsing entity <Sbox>.
+Parsing architecture <trans> of entity <sbox>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd" into library work
+Parsing entity <Subbytes_32>.
+Parsing architecture <trans> of entity <subbytes_32>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd" into library work
+Parsing entity <RoundkeyGen>.
+Parsing architecture <trans> of entity <roundkeygen>.
+Parsing VHDL file "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd" into library work
+Parsing entity <Keyexpantion>.
+Parsing architecture <trans> of entity <keyexpantion>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Keyexpantion> (architecture <trans>) from library <work>.
+
+Elaborating entity <RoundkeyGen> (architecture <trans>) from library <work>.
+
+Elaborating entity <Subbytes_32> (architecture <trans>) from library <work>.
+
+Elaborating entity <Sbox> (architecture <trans>) from library <work>.
+INFO:HDLCompiler:679 - "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd" Line 532. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Keyexpantion>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Keyexpantion.vhd".
+    Found 11-bit register for signal <valid_out>.
+    Found 1408-bit register for signal <W>.
+    Summary:
+	inferred 1419 D-type flip-flop(s).
+	inferred 1290 Multiplexer(s).
+Unit <Keyexpantion> synthesized.
+
+Synthesizing Unit <RoundkeyGen>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\RoundkeyGen.vhd".
+    Found 128-bit register for signal <round_key>.
+    Found 128-bit register for signal <round_key_delay>.
+    Found 1-bit register for signal <valid_round_key>.
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred 258 D-type flip-flop(s).
+Unit <RoundkeyGen> synthesized.
+
+Synthesizing Unit <Subbytes_32>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Subbytes.vhd".
+    Found 1-bit register for signal <valid_out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Subbytes_32> synthesized.
+
+Synthesizing Unit <Sbox>.
+    Related source file is "E:\AES128_Fpga\AES_TOP\AES128_pipelined\Sbox.vhd".
+    Found 256x8-bit Read Only RAM for signal <dout>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Sbox> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 40
+ 256x8-bit single-port Read Only RAM                   : 40
+# Registers                                            : 52
+ 1-bit register                                        : 30
+ 11-bit register                                       : 1
+ 128-bit register                                      : 20
+ 1408-bit register                                     : 1
+# Multiplexers                                         : 1290
+ 1-bit 2-to-1 multiplexer                              : 1290
+# Xors                                                 : 50
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Sbox>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dout> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+Unit <Sbox> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 40
+ 256x8-bit single-port distributed Read Only RAM       : 40
+# Registers                                            : 4009
+ Flip-Flops                                            : 4009
+# Multiplexers                                         : 1290
+ 1-bit 2-to-1 multiplexer                              : 1290
+# Xors                                                 : 50
+ 32-bit xor2                                           : 50
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Keyexpantion> ...
+
+Optimizing unit <RoundkeyGen> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <valid_out_5> in Unit <Keyexpantion> is equivalent to the following FF/Latch, which will be removed : <ROUND_KEY_GEN[6].RKGEN_U/SUB_U/valid_out> 
+Found area constraint ratio of 100 (+ 5) on block Keyexpantion, actual ratio is 11.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4008
+ Flip-Flops                                            : 4008
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Keyexpantion.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4811
+#      INV                         : 1
+#      LUT2                        : 322
+#      LUT3                        : 1608
+#      LUT4                        : 320
+#      LUT5                        : 320
+#      LUT6                        : 1280
+#      MUXF7                       : 640
+#      MUXF8                       : 320
+# FlipFlops/Latches                : 4008
+#      FDC                         : 40
+#      FDCE                        : 2560
+#      FDE                         : 1408
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1550
+#      IBUF                        : 131
+#      OBUF                        : 1419
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4008  out of  126800     3%  
+ Number of Slice LUTs:                 3851  out of  63400     6%  
+    Number used as Logic:              3851  out of  63400     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5289
+   Number with an unused Flip Flop:    1281  out of   5289    24%  
+   Number with an unused LUT:          1438  out of   5289    27%  
+   Number of fully used LUT-FF pairs:  2570  out of   5289    48%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                        1551
+ Number of bonded IOBs:                1551  out of    210   738% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4008  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.953ns (Maximum Frequency: 338.617MHz)
+   Minimum input arrival time before clock: 2.476ns
+   Maximum output required time after clock: 1.051ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.953ns (frequency: 338.617MHz)
+  Total number of paths / destination ports: 40303 / 6439
+-------------------------------------------------------------------------
+Delay:               2.953ns (Levels of Logic = 4)
+  Source:            RKGEN_U0/round_key_16 (FF)
+  Destination:       ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_127 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: RKGEN_U0/round_key_16 to ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            35   0.478   1.092  RKGEN_U0/round_key_16 (RKGEN_U0/round_key_16)
+     LUT6:I0->O            1   0.124   0.000  ROUND_KEY_GEN[1].RKGEN_U_SUB_U/ROM[3].u_sbox/Mram_dout23 (ROUND_KEY_GEN[1].RKGEN_U_SUB_U/ROM[3].u_sbox/Mram_dout23)
+     MUXF7:I1->O           1   0.368   0.000  ROUND_KEY_GEN[1].RKGEN_U_SUB_U/ROM[3].u_sbox/Mram_dout2_f7_0 (ROUND_KEY_GEN[1].RKGEN_U_SUB_U/ROM[3].u_sbox/Mram_dout2_f71)
+     MUXF8:I0->O           4   0.296   0.441  ROUND_KEY_GEN[1].RKGEN_U_SUB_U/ROM[3].u_sbox/Mram_dout2_f8 (ROUND_KEY_GEN[1].RKGEN_U/Key_SubBytes<25>)
+     LUT2:I1->O            1   0.124   0.000  ROUND_KEY_GEN[1].RKGEN_U/temp_round_key<121>1 (ROUND_KEY_GEN[1].RKGEN_U/temp_round_key<121>)
+     FDCE:D                    0.030          ROUND_KEY_GEN[1].RKGEN_U/round_key_delay_121
+    ----------------------------------------
+    Total                      2.953ns (1.420ns logic, 1.533ns route)
+                                       (48.1% logic, 51.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 9331 / 5427
+-------------------------------------------------------------------------
+Offset:              2.476ns (Levels of Logic = 5)
+  Source:            cipher_key<16> (PAD)
+  Destination:       RKGEN_U0/round_key_delay_127 (FF)
+  Destination Clock: clk rising
+
+  Data Path: cipher_key<16> to RKGEN_U0/round_key_delay_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   1.092  cipher_key_16_IBUF (cipher_key_16_IBUF)
+     LUT6:I0->O            1   0.124   0.000  RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout23 (RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout23)
+     MUXF7:I1->O           1   0.368   0.000  RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f7_0 (RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f71)
+     MUXF8:I0->O           4   0.296   0.441  RKGEN_U0_SUB_U/ROM[3].u_sbox/Mram_dout2_f8 (RKGEN_U0/Key_SubBytes<25>)
+     LUT2:I1->O            1   0.124   0.000  RKGEN_U0/temp_round_key<121>1 (RKGEN_U0/temp_round_key<121>)
+     FDCE:D                    0.030          RKGEN_U0/round_key_delay_121
+    ----------------------------------------
+    Total                      2.476ns (0.943ns logic, 1.533ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1419 / 1419
+-------------------------------------------------------------------------
+Offset:              1.051ns (Levels of Logic = 1)
+  Source:            valid_out_5 (FF)
+  Destination:       valid_out<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: valid_out_5 to valid_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            130   0.478   0.573  valid_out_5 (valid_out_5)
+     OBUF:I->O                 0.000          valid_out_5_OBUF (valid_out<5>)
+    ----------------------------------------
+    Total                      1.051ns (0.478ns logic, 0.573ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.953|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.42 secs
+ 
+--> 
+
+Total memory usage is 4649680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

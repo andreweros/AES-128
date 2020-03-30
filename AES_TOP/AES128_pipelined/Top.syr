@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Top.prj
 
@@ -46,7 +46,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "Top"
 Output Format                      : NGC
-Target Device                      : xc7a200t-1-ffg1156
+Target Device                      : xc7a100t-1-csg324
 
 ---- Source Options
 Top Module Name                    : Top
@@ -849,7 +849,7 @@ Optimizing unit <Mixcolumns> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 14.
 
 Final Macro Processing ...
 
@@ -881,10 +881,10 @@ Top Level Output File Name         : Top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6545
+# BELS                             : 6544
 #      GND                         : 1
 #      INV                         : 11
-#      LUT2                        : 2053
+#      LUT2                        : 2052
 #      LUT3                        : 320
 #      LUT4                        : 448
 #      LUT5                        : 1040
@@ -906,29 +906,31 @@ Primitive and Black Box Usage:
 Device utilization summary:
 ---------------------------
 
-Selected Device : 7a200tffg1156-1 
+Selected Device : 7a100tcsg324-1 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5190  out of  269200     1%  
- Number of Slice LUTs:                 5584  out of  134600     4%  
-    Number used as Logic:              5584  out of  134600     4%  
+ Number of Slice Registers:            5190  out of  126800     4%  
+ Number of Slice LUTs:                 5583  out of  63400     8%  
+    Number used as Logic:              5583  out of  63400     8%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:   6908
    Number with an unused Flip Flop:    1718  out of   6908    24%  
-   Number with an unused LUT:          1324  out of   6908    19%  
-   Number of fully used LUT-FF pairs:  3866  out of   6908    55%  
+   Number with an unused LUT:          1325  out of   6908    19%  
+   Number of fully used LUT-FF pairs:  3865  out of   6908    55%  
    Number of unique control sets:        41
 
 IO Utilization: 
  Number of IOs:                         389
- Number of bonded IOBs:                 389  out of    500    77%  
+ Number of bonded IOBs:                 389  out of    210   185% (*) 
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               40  out of    365    10%  
+ Number of Block RAM/FIFO:               40  out of    135    29%  
     Number using Block RAM only:         40
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -956,11 +958,11 @@ clk                                | BUFGP                  | 5270  |
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+-------------------------------------+-------+
-Control Signal                     | Buffer(FF name)                     | Load  |
------------------------------------+-------------------------------------+-------+
-N1(XST_GND:G)                      | NONE(U_SUB/ROM[9].u_sbox/Mram_dout1)| 160   |
------------------------------------+-------------------------------------+-------+
+-----------------------------------+-----------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                           | Load  |
+-----------------------------------+-----------------------------------------------------------+-------+
+N1(XST_GND:G)                      | NONE(ROUND_GEN[5].ROUND_U_U_SUB/ROM[11].u_sbox/Mram_dout1)| 160   |
+-----------------------------------+-----------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -1000,7 +1002,7 @@ Delay:               3.716ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 4579 / 674
+  Total number of paths / destination ports: 4450 / 674
 -------------------------------------------------------------------------
 Offset:              2.476ns (Levels of Logic = 5)
   Source:            cipher_key<16> (PAD)
@@ -1057,13 +1059,13 @@ clk            |    3.716|         |         |         |
 
 
 Total REAL time to Xst completion: 31.00 secs
-Total CPU time to Xst completion: 31.70 secs
+Total CPU time to Xst completion: 31.01 secs
  
 --> 
 
-Total memory usage is 4684212 kilobytes
+Total memory usage is 4684268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :   48 (   0 filtered)
 

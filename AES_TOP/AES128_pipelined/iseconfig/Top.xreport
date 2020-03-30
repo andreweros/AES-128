@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-23T18:36:24</DateModified>
+  <DateModified>2020-03-30T13:06:27</DateModified>
   <ModuleName>Top</ModuleName>
-  <SummaryTimeStamp>2020-03-21T13:19:55</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-03-30T13:06:05</SummaryTimeStamp>
   <SavedFilePath>E:/AES128_Fpga/AES_TOP/AES128_pipelined/iseconfig/Top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/AES128_Fpga/AES_TOP/AES128_pipelined\</ImplementationReportsDirectory>
-  <DateInitialized>2020-03-21T12:44:53</DateInitialized>
+  <DateInitialized>2020-03-30T13:06:27</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

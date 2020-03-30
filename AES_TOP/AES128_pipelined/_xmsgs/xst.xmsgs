@@ -126,5 +126,8 @@
 <msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">U_SUB/ROM[1].u_sbox/Mram_dout</arg>&gt;, &lt;<arg fmt="%s" index="3">U_SUB/ROM[0].u_sbox/Mram_dout</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">U_SUB/ROM[1].u_sbox/Mram_dout1</arg>&gt;
 </msg>
 
+<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
+</msg>
+
 </messages>
 

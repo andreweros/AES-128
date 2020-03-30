@@ -1,0 +1,455 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n 3
+-fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf
+
+Design file:              Top.ncd
+Physical constraint file: Top.pcf
+Device,package,speed:     xc7a200t,ffg1156,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------------+------------+------------+------------+------------+------------------+--------+
+                  |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source            | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------------+------------+------------+------------+------------+------------------+--------+
+cipher_key<0>     |    3.376(R)|      SLOW  |    0.582(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<1>     |    3.204(R)|      SLOW  |    0.207(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<2>     |    2.863(R)|      SLOW  |    0.701(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<3>     |    3.023(R)|      SLOW  |    1.432(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<4>     |    3.529(R)|      SLOW  |    0.178(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<5>     |    2.620(R)|      SLOW  |    1.149(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<6>     |    2.358(R)|      SLOW  |    1.343(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<7>     |    3.169(R)|      SLOW  |    0.138(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<8>     |    2.892(R)|      SLOW  |    1.151(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<9>     |    2.808(R)|      SLOW  |    1.110(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<10>    |    3.505(R)|      SLOW  |    1.002(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<11>    |    3.147(R)|      SLOW  |    1.273(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<12>    |    3.787(R)|      SLOW  |    0.535(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<13>    |    3.222(R)|      SLOW  |    1.177(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<14>    |    4.000(R)|      SLOW  |   -0.074(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<15>    |    3.508(R)|      SLOW  |    0.188(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<16>    |    3.323(R)|      SLOW  |    1.170(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<17>    |    3.001(R)|      SLOW  |    0.161(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<18>    |    2.779(R)|      SLOW  |    0.311(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<19>    |    2.896(R)|      SLOW  |    1.003(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<20>    |    3.884(R)|      SLOW  |    1.222(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<21>    |    3.804(R)|      SLOW  |    1.429(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<22>    |    2.264(R)|      SLOW  |    0.870(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<23>    |    3.245(R)|      SLOW  |    1.610(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<24>    |    3.002(R)|      SLOW  |    1.913(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<25>    |    3.423(R)|      SLOW  |    1.367(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<26>    |    3.154(R)|      SLOW  |    0.869(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<27>    |    3.093(R)|      SLOW  |    0.923(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<28>    |    2.975(R)|      SLOW  |    0.468(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<29>    |    2.549(R)|      SLOW  |    0.918(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<30>    |    2.942(R)|      SLOW  |    1.583(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<31>    |    2.308(R)|      SLOW  |    1.471(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<32>    |    0.693(R)|      FAST  |    2.131(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<33>    |    0.544(R)|      FAST  |    2.343(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<34>    |    0.714(R)|      FAST  |    2.278(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<35>    |    0.639(R)|      FAST  |    1.905(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<36>    |    0.512(R)|      FAST  |    1.981(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<37>    |    1.089(R)|      FAST  |    2.064(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<38>    |    0.886(R)|      FAST  |    2.323(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<39>    |    0.279(R)|      FAST  |    2.677(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<40>    |    0.259(R)|      FAST  |    2.601(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<41>    |    0.501(R)|      FAST  |    1.762(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<42>    |    0.488(R)|      FAST  |    3.078(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<43>    |    0.391(R)|      FAST  |    2.625(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<44>    |    0.131(R)|      FAST  |    2.627(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<45>    |    0.141(R)|      FAST  |    2.534(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<46>    |    0.207(R)|      FAST  |    2.671(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<47>    |    0.568(R)|      FAST  |    2.553(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<48>    |    0.209(R)|      FAST  |    2.863(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<49>    |    0.925(R)|      FAST  |    1.257(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<50>    |    0.883(R)|      FAST  |    1.542(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<51>    |    0.672(R)|      FAST  |    2.291(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<52>    |    0.824(R)|      FAST  |    1.605(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<53>    |    0.667(R)|      FAST  |    2.213(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<54>    |    0.675(R)|      FAST  |    2.026(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<55>    |    0.658(R)|      FAST  |    1.784(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<56>    |    0.609(R)|      FAST  |    2.295(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<57>    |    1.071(R)|      SLOW  |    2.473(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<58>    |    1.054(R)|      FAST  |    2.311(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<59>    |    1.126(R)|      FAST  |    2.280(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<60>    |    0.846(R)|      FAST  |    2.252(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<61>    |    0.593(R)|      FAST  |    1.997(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<62>    |    0.384(R)|      FAST  |    2.359(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<63>    |    0.621(R)|      FAST  |    2.292(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<64>    |    1.003(R)|      FAST  |    2.479(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<65>    |    1.117(R)|      FAST  |    2.483(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<66>    |    1.105(R)|      FAST  |    2.333(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<67>    |    1.008(R)|      FAST  |    2.241(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<68>    |    1.223(R)|      FAST  |    2.173(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<69>    |    0.952(R)|      FAST  |    2.203(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<70>    |    0.673(R)|      FAST  |    2.419(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<71>    |    0.944(R)|      FAST  |    2.652(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<72>    |    0.681(R)|      FAST  |    2.467(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<73>    |    0.716(R)|      FAST  |    2.495(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<74>    |    0.453(R)|      FAST  |    2.056(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<75>    |    0.707(R)|      FAST  |    2.616(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<76>    |    1.070(R)|      FAST  |    1.977(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<77>    |    1.129(R)|      FAST  |    2.049(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<78>    |    0.830(R)|      FAST  |    1.830(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<79>    |    1.016(R)|      FAST  |    1.995(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<80>    |    0.770(R)|      FAST  |    2.758(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<81>    |    0.527(R)|      FAST  |    2.416(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<82>    |    0.918(R)|      FAST  |    2.439(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<83>    |    0.651(R)|      FAST  |    2.473(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<84>    |    0.674(R)|      FAST  |    2.495(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<85>    |    0.614(R)|      FAST  |    2.229(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<86>    |    1.010(R)|      FAST  |    2.240(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<87>    |    0.633(R)|      FAST  |    2.118(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<88>    |    0.985(R)|      FAST  |    3.201(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<89>    |    1.295(R)|      FAST  |    3.328(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<90>    |    0.958(R)|      FAST  |    3.538(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<91>    |    0.994(R)|      FAST  |    3.386(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<92>    |    0.747(R)|      FAST  |    3.246(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<93>    |    0.562(R)|      FAST  |    3.214(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<94>    |    0.560(R)|      FAST  |    3.535(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<95>    |    0.149(R)|      FAST  |    3.065(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<96>    |    0.538(R)|      FAST  |    2.977(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<97>    |    0.385(R)|      FAST  |    2.876(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<98>    |    0.839(R)|      FAST  |    2.464(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<99>    |    0.791(R)|      FAST  |    2.145(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<100>   |    0.634(R)|      FAST  |    2.809(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<101>   |    0.802(R)|      FAST  |    2.801(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<102>   |    0.605(R)|      FAST  |    1.945(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<103>   |    0.791(R)|      FAST  |    3.079(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<104>   |    0.813(R)|      FAST  |    1.788(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<105>   |    0.522(R)|      FAST  |    2.133(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<106>   |    0.632(R)|      FAST  |    3.092(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<107>   |    0.433(R)|      FAST  |    3.257(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<108>   |    0.206(R)|      FAST  |    2.207(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<109>   |    0.602(R)|      FAST  |    2.618(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<110>   |    0.462(R)|      FAST  |    2.530(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<111>   |    0.585(R)|      FAST  |    2.436(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<112>   |    0.240(R)|      FAST  |    2.405(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<113>   |   -0.049(R)|      FAST  |    3.017(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<114>   |    0.496(R)|      FAST  |    2.616(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<115>   |    0.784(R)|      FAST  |    2.056(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<116>   |    0.175(R)|      FAST  |    2.634(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<117>   |    0.296(R)|      FAST  |    2.307(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<118>   |    0.178(R)|      FAST  |    2.696(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<119>   |    0.381(R)|      FAST  |    2.639(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<120>   |    0.139(R)|      FAST  |    3.832(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<121>   |    0.202(R)|      FAST  |    3.722(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<122>   |    0.084(R)|      FAST  |    3.968(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<123>   |    0.203(R)|      FAST  |    4.045(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<124>   |    0.093(R)|      FAST  |    3.695(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<125>   |    0.070(R)|      FAST  |    3.898(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<126>   |    0.201(R)|      FAST  |    3.649(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipher_key<127>   |    0.043(R)|      FAST  |    4.007(R)|      SLOW  |clk_BUFGP         |   0.000|
+cipherkey_valid_in|   -0.500(R)|      FAST  |    3.502(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_valid_in     |    4.581(R)|      SLOW  |    3.174(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<0>     |   -0.383(R)|      FAST  |    3.336(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<1>     |   -0.494(R)|      FAST  |    3.535(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<2>     |   -0.545(R)|      FAST  |    3.616(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<3>     |   -0.416(R)|      FAST  |    3.283(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<4>     |   -0.322(R)|      FAST  |    3.217(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<5>     |   -0.294(R)|      FAST  |    3.139(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<6>     |   -0.572(R)|      FAST  |    3.698(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<7>     |   -0.260(R)|      FAST  |    3.118(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<8>     |   -0.289(R)|      FAST  |    3.112(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<9>     |   -0.352(R)|      FAST  |    3.243(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<10>    |   -0.294(R)|      FAST  |    3.128(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<11>    |   -0.247(R)|      FAST  |    2.949(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<12>    |   -0.343(R)|      FAST  |    3.246(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<13>    |   -0.188(R)|      FAST  |    2.916(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<14>    |   -0.356(R)|      FAST  |    3.289(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<15>    |   -0.174(R)|      FAST  |    2.990(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<16>    |    0.014(R)|      FAST  |    2.538(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<17>    |    0.008(R)|      FAST  |    2.498(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<18>    |    0.210(R)|      FAST  |    2.215(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<19>    |   -0.048(R)|      FAST  |    2.631(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<20>    |   -0.020(R)|      FAST  |    2.561(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<21>    |   -0.225(R)|      FAST  |    2.964(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<22>    |   -0.109(R)|      FAST  |    2.751(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<23>    |    0.192(R)|      FAST  |    2.211(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<24>    |    0.272(R)|      FAST  |    2.040(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<25>    |    0.277(R)|      FAST  |    2.063(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<26>    |    0.112(R)|      FAST  |    2.300(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<27>    |    0.170(R)|      FAST  |    2.228(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<28>    |    0.001(R)|      FAST  |    2.524(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<29>    |    0.194(R)|      FAST  |    2.268(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<30>    |    0.508(R)|      FAST  |    1.823(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<31>    |   -0.093(R)|      FAST  |    2.686(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<32>    |    0.048(R)|      FAST  |    2.382(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<33>    |   -0.297(R)|      FAST  |    2.941(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<34>    |   -0.119(R)|      FAST  |    2.627(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<35>    |   -0.285(R)|      FAST  |    2.913(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<36>    |   -0.005(R)|      FAST  |    2.473(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<37>    |   -0.293(R)|      FAST  |    2.893(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<38>    |   -0.168(R)|      FAST  |    2.736(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<39>    |   -0.245(R)|      FAST  |    2.863(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<40>    |   -0.421(R)|      FAST  |    3.254(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<41>    |   -0.336(R)|      FAST  |    3.194(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<42>    |   -0.103(R)|      FAST  |    2.752(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<43>    |    0.090(R)|      FAST  |    2.352(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<44>    |   -0.264(R)|      FAST  |    3.107(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<45>    |   -0.024(R)|      FAST  |    2.667(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<46>    |    0.035(R)|      FAST  |    2.522(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<47>    |   -0.016(R)|      FAST  |    2.554(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<48>    |    0.656(R)|      FAST  |    1.509(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<49>    |    0.377(R)|      FAST  |    1.852(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<50>    |    0.551(R)|      FAST  |    1.697(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<51>    |    0.609(R)|      FAST  |    1.549(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<52>    |    0.493(R)|      FAST  |    1.689(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<53>    |    0.483(R)|      FAST  |    1.718(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<54>    |    0.756(R)|      FAST  |    1.564(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<55>    |    0.468(R)|      FAST  |    1.871(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<56>    |    0.786(R)|      FAST  |    1.378(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<57>    |    0.596(R)|      FAST  |    1.597(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<58>    |    0.748(R)|      FAST  |    1.358(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<59>    |    0.480(R)|      FAST  |    1.853(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<60>    |    0.853(R)|      FAST  |    1.212(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<61>    |    0.867(R)|      FAST  |    1.219(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<62>    |    0.907(R)|      FAST  |    0.972(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<63>    |    0.612(R)|      FAST  |    1.566(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<64>    |    0.657(R)|      FAST  |    1.524(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<65>    |    0.494(R)|      FAST  |    1.759(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<66>    |    0.498(R)|      FAST  |    1.851(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<67>    |    0.777(R)|      FAST  |    1.263(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<68>    |    0.527(R)|      FAST  |    1.741(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<69>    |    0.336(R)|      FAST  |    2.034(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<70>    |    0.531(R)|      FAST  |    1.771(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<71>    |    0.347(R)|      FAST  |    2.122(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<72>    |    0.488(R)|      FAST  |    1.922(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<73>    |    0.542(R)|      FAST  |    1.763(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<74>    |    0.479(R)|      FAST  |    1.838(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<75>    |    0.632(R)|      FAST  |    1.541(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<76>    |    0.676(R)|      FAST  |    1.497(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<77>    |    0.464(R)|      FAST  |    1.854(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<78>    |    0.716(R)|      FAST  |    1.584(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<79>    |    0.786(R)|      FAST  |    1.395(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<80>    |    0.637(R)|      FAST  |    1.478(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<81>    |    0.658(R)|      FAST  |    1.410(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<82>    |    0.562(R)|      FAST  |    1.680(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<83>    |    0.576(R)|      FAST  |    1.593(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<84>    |    0.498(R)|      FAST  |    1.766(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<85>    |    0.520(R)|      FAST  |    1.651(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<86>    |    0.668(R)|      FAST  |    1.476(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<87>    |    0.543(R)|      FAST  |    1.707(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<88>    |    0.528(R)|      FAST  |    1.764(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<89>    |    0.619(R)|      FAST  |    1.459(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<90>    |    0.652(R)|      FAST  |    1.510(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<91>    |    0.738(R)|      FAST  |    1.317(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<92>    |    0.540(R)|      FAST  |    1.743(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<93>    |    0.715(R)|      FAST  |    1.321(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<94>    |    0.826(R)|      FAST  |    1.305(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<95>    |    0.721(R)|      FAST  |    1.458(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<96>    |    0.937(R)|      FAST  |    0.962(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<97>    |    1.083(R)|      FAST  |    0.732(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<98>    |    1.111(R)|      FAST  |    0.709(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<99>    |    0.773(R)|      FAST  |    1.233(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<100>   |    1.531(R)|      SLOW  |    0.166(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<101>   |    0.906(R)|      FAST  |    1.036(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<102>   |    0.684(R)|      FAST  |    1.374(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<103>   |    0.944(R)|      FAST  |    0.908(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<104>   |    0.965(R)|      FAST  |    0.892(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<105>   |    1.064(R)|      FAST  |    0.719(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<106>   |    0.958(R)|      FAST  |    0.920(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<107>   |    1.178(R)|      FAST  |    0.505(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<108>   |    0.875(R)|      FAST  |    1.052(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<109>   |    0.964(R)|      FAST  |    0.778(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<110>   |    0.983(R)|      FAST  |    0.928(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<111>   |    0.980(R)|      FAST  |    0.882(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<112>   |    0.885(R)|      FAST  |    1.044(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<113>   |    1.007(R)|      FAST  |    0.780(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<114>   |    1.174(R)|      FAST  |    0.564(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<115>   |    1.179(R)|      FAST  |    0.551(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<116>   |    1.080(R)|      FAST  |    0.775(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<117>   |    1.109(R)|      FAST  |    0.586(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<118>   |    0.880(R)|      FAST  |    1.068(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<119>   |    1.089(R)|      FAST  |    0.673(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<120>   |   -0.305(R)|      FAST  |    3.182(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<121>   |   -0.517(R)|      FAST  |    3.554(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<122>   |   -0.386(R)|      FAST  |    3.338(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<123>   |   -0.273(R)|      FAST  |    3.058(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<124>   |   -0.358(R)|      FAST  |    3.228(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<125>   |   -0.298(R)|      FAST  |    3.139(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<126>   |   -0.158(R)|      FAST  |    3.026(R)|      SLOW  |clk_BUFGP         |   0.000|
+plain_text<127>   |   -0.273(R)|      FAST  |    3.107(R)|      SLOW  |clk_BUFGP         |   0.000|
+reset             |    7.344(R)|      SLOW  |    2.736(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+cipher_text<0>  |        12.398(R)|      SLOW  |         4.341(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<1>  |        13.517(R)|      SLOW  |         4.843(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<2>  |        13.405(R)|      SLOW  |         4.802(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<3>  |        12.801(R)|      SLOW  |         4.515(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<4>  |        12.563(R)|      SLOW  |         4.366(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<5>  |        13.318(R)|      SLOW  |         4.763(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<6>  |        13.268(R)|      SLOW  |         4.761(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<7>  |        12.857(R)|      SLOW  |         4.539(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<8>  |        13.203(R)|      SLOW  |         4.752(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<9>  |        14.032(R)|      SLOW  |         5.226(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<10> |        13.665(R)|      SLOW  |         4.935(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<11> |        13.077(R)|      SLOW  |         4.673(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<12> |        13.097(R)|      SLOW  |         4.635(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<13> |        13.976(R)|      SLOW  |         4.902(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<14> |        13.573(R)|      SLOW  |         4.751(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<15> |        13.391(R)|      SLOW  |         4.672(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<16> |        14.037(R)|      SLOW  |         5.079(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<17> |        13.769(R)|      SLOW  |         4.827(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<18> |        13.275(R)|      SLOW  |         4.719(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<19> |        13.484(R)|      SLOW  |         4.763(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<20> |        13.487(R)|      SLOW  |         4.764(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<21> |        14.158(R)|      SLOW  |         5.017(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<22> |        13.211(R)|      SLOW  |         4.676(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<23> |        13.473(R)|      SLOW  |         4.697(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<24> |        12.605(R)|      SLOW  |         4.391(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<25> |        13.591(R)|      SLOW  |         4.956(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<26> |        13.529(R)|      SLOW  |         4.861(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<27> |        13.132(R)|      SLOW  |         4.636(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<28> |        13.155(R)|      SLOW  |         4.743(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<29> |        14.673(R)|      SLOW  |         5.507(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<30> |        13.843(R)|      SLOW  |         5.009(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<31> |        13.525(R)|      SLOW  |         4.838(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<32> |        13.415(R)|      SLOW  |         4.772(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<33> |        14.376(R)|      SLOW  |         5.133(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<34> |        15.540(R)|      SLOW  |         5.849(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<35> |        14.255(R)|      SLOW  |         5.067(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<36> |        13.333(R)|      SLOW  |         4.726(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<37> |        14.528(R)|      SLOW  |         5.170(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<38> |        14.576(R)|      SLOW  |         5.206(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<39> |        14.556(R)|      SLOW  |         5.186(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<40> |        15.317(R)|      SLOW  |         5.570(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<41> |        15.467(R)|      SLOW  |         5.560(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<42> |        15.366(R)|      SLOW  |         5.633(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<43> |        15.254(R)|      SLOW  |         5.521(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<44> |        15.422(R)|      SLOW  |         5.546(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<45> |        15.441(R)|      SLOW  |         5.562(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<46> |        14.617(R)|      SLOW  |         5.289(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<47> |        14.396(R)|      SLOW  |         5.156(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<48> |        14.804(R)|      SLOW  |         5.433(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<49> |        14.729(R)|      SLOW  |         5.360(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<50> |        14.787(R)|      SLOW  |         5.398(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<51> |        14.441(R)|      SLOW  |         5.158(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<52> |        14.935(R)|      SLOW  |         5.443(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<53> |        14.424(R)|      SLOW  |         5.138(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<54> |        14.752(R)|      SLOW  |         5.381(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<55> |        14.600(R)|      SLOW  |         5.295(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<56> |        15.307(R)|      SLOW  |         5.550(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<57> |        15.337(R)|      SLOW  |         5.583(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<58> |        15.147(R)|      SLOW  |         5.381(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<59> |        15.195(R)|      SLOW  |         5.378(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<60> |        15.584(R)|      SLOW  |         5.577(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<61> |        15.915(R)|      SLOW  |         5.703(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<62> |        15.797(R)|      SLOW  |         5.659(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<63> |        15.835(R)|      SLOW  |         5.680(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<64> |        15.059(R)|      SLOW  |         5.468(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<65> |        15.219(R)|      SLOW  |         5.529(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<66> |        15.167(R)|      SLOW  |         5.529(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<67> |        14.780(R)|      SLOW  |         5.256(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<68> |        15.286(R)|      SLOW  |         5.542(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<69> |        15.008(R)|      SLOW  |         5.437(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<70> |        14.892(R)|      SLOW  |         5.405(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<71> |        15.057(R)|      SLOW  |         5.484(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<72> |        15.593(R)|      SLOW  |         5.613(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<73> |        15.603(R)|      SLOW  |         5.622(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<74> |        15.702(R)|      SLOW  |         5.710(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<75> |        14.657(R)|      SLOW  |         5.216(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<76> |        15.324(R)|      SLOW  |         5.547(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<77> |        15.814(R)|      SLOW  |         5.720(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<78> |        15.260(R)|      SLOW  |         5.386(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<79> |        15.527(R)|      SLOW  |         5.519(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<80> |        16.448(R)|      SLOW  |         5.953(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<81> |        16.720(R)|      SLOW  |         6.171(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<82> |        16.427(R)|      SLOW  |         5.971(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<83> |        16.320(R)|      SLOW  |         5.945(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<84> |        16.777(R)|      SLOW  |         6.103(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<85> |        16.617(R)|      SLOW  |         6.028(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<86> |        16.205(R)|      SLOW  |         5.883(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<87> |        16.394(R)|      SLOW  |         5.990(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<88> |        16.481(R)|      SLOW  |         6.184(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<89> |        16.758(R)|      SLOW  |         6.297(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<90> |        14.713(R)|      SLOW  |         5.387(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<91> |        13.795(R)|      SLOW  |         4.878(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<92> |        13.111(R)|      SLOW  |         4.611(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<93> |        13.800(R)|      SLOW  |         4.808(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<94> |        13.726(R)|      SLOW  |         4.785(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<95> |        13.817(R)|      SLOW  |         4.804(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<96> |        14.421(R)|      SLOW  |         5.187(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<97> |        14.377(R)|      SLOW  |         5.132(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<98> |        14.114(R)|      SLOW  |         5.140(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<99> |        13.834(R)|      SLOW  |         4.874(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<100>|        13.352(R)|      SLOW  |         4.689(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<101>|        13.844(R)|      SLOW  |         4.909(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<102>|        13.788(R)|      SLOW  |         4.870(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<103>|        13.865(R)|      SLOW  |         4.834(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<104>|        13.342(R)|      SLOW  |         4.655(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<105>|        14.292(R)|      SLOW  |         4.970(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<106>|        13.978(R)|      SLOW  |         4.853(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<107>|        14.067(R)|      SLOW  |         4.871(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<108>|        13.343(R)|      SLOW  |         4.659(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<109>|        15.532(R)|      SLOW  |         5.632(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<110>|        14.185(R)|      SLOW  |         4.952(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<111>|        13.867(R)|      SLOW  |         4.819(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<112>|        13.622(R)|      SLOW  |         4.839(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<113>|        14.258(R)|      SLOW  |         4.958(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<114>|        14.209(R)|      SLOW  |         5.010(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<115>|        14.106(R)|      SLOW  |         4.865(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<116>|        13.827(R)|      SLOW  |         4.838(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<117>|        14.914(R)|      SLOW  |         5.225(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<118>|        13.971(R)|      SLOW  |         4.893(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<119>|        14.154(R)|      SLOW  |         4.966(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<120>|        13.761(R)|      SLOW  |         4.821(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<121>|        14.665(R)|      SLOW  |         5.127(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<122>|        14.561(R)|      SLOW  |         5.044(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<123>|        14.418(R)|      SLOW  |         4.990(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<124>|        16.125(R)|      SLOW  |         5.816(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<125>|        15.349(R)|      SLOW  |         5.462(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<126>|        15.538(R)|      SLOW  |         5.524(R)|      FAST  |clk_BUFGP         |   0.000|
+cipher_text<127>|        14.281(R)|      SLOW  |         4.977(R)|      FAST  |clk_BUFGP         |   0.000|
+valid_out       |        12.329(R)|      SLOW  |         4.412(R)|      FAST  |clk_BUFGP         |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.998|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Mar 30 13:13:57 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5235 MB
+
+
+
